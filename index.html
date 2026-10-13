@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Triqui</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="juego">
+    <h1 class="titulo"><span class="x">X</span> Triqui <span class="o">O</span></h1>
+
+    <!-- Configuración -->
+    <section class="config">
+      <label>Modo
+        <select id="modo">
+          <option value="pc">Jugador vs PC</option>
+          <option value="2j">2 jugadores</option>
+        </select>
+      </label>
+      <label id="labelNivel">Nivel
+        <select id="nivel">
+          <option value="facil">Fácil</option>
+          <option value="imposible">Imposible</option>
+        </select>
+      </label>
+    </section>
+
+    <!-- Marcador -->
+    <section class="marcador">
+      <div class="puntos x"><span>X</span><strong id="puntosX">0</strong></div>
+      <div class="puntos empate"><span>Empates</span><strong id="puntosE">0</strong></div>
+      <div class="puntos o"><span>O</span><strong id="puntosO">0</strong></div>
+    </section>
+
+    <p id="mensaje" class="mensaje" aria-live="polite">Turno de X</p>
+
+    <!-- Tablero -->
+    <section id="tablero" class="tablero" aria-label="Tablero">
+      <button class="celda" data-i="0"></button>
+      <button class="celda" data-i="1"></button>
+      <button class="celda" data-i="2"></button>
+      <button class="celda" data-i="3"></button>
+      <button class="celda" data-i="4"></button>
+      <button class="celda" data-i="5"></button>
+      <button class="celda" data-i="6"></button>
+      <button class="celda" data-i="7"></button>
+      <button class="celda" data-i="8"></button>
+    </section>
+
+    <div class="botones">
+      <button id="btnNueva" type="button">Nueva partida</button>
+      <button id="btnReiniciar" type="button" class="secundario">Reiniciar marcador</button>
+    </div>
+  </main>
+
+  <script src="js/juego.js"></script>
+</body>
+</html>
